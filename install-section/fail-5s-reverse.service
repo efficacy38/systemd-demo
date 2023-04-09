@@ -1,0 +1,9 @@
+[Unit]
+Description=fail-reverse in 5s
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/wait.sh 2-fail-reverse-5s 5
+
+[Install]
+WantedBy=wait.service

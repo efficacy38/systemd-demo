@@ -1,0 +1,10 @@
+[Unit]
+Description=wait.sh requires fail-immediate.service and fail-5s.service
+Requires=fail-immediate.service fail-5s.service
+# After=fail-immediate.service
+# BindsTo=fail-immediate.service
+# Requisite=fail-immediate.service
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/wait.sh 1-wait-require

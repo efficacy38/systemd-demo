@@ -1,0 +1,6 @@
+[Unit]
+Description=fail immediate
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/wait.sh 3-fail-immediate 0

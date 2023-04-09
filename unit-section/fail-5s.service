@@ -1,0 +1,6 @@
+[Unit]
+Description=fail in 5s
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/wait.sh 2-fail-5s 5

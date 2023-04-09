@@ -1,0 +1,8 @@
+[Unit]
+Description=wait.sh bindTo fail-immediate.service and fail-5s.service
+Requires=fail-immediate.service fail-5s.service
+BindsTo=fail-immediate.service fail-5s.service
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/wait.sh wait-bindto

@@ -1,0 +1,9 @@
+[Unit]
+Description=simple wait
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/wait.sh simple-wait
+
+[Install]
+WantedBy=multi-user.target

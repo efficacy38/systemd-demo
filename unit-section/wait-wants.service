@@ -1,0 +1,7 @@
+[Unit]
+Description=counter wants fail-immediate.service and fail-5s.service
+Wants=fail-immediate.service fail-5s.service
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/wait.sh wait-wants
