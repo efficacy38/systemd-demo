@@ -1,11 +1,10 @@
 #!/bin/sh
 
 # install the counter.py
-install *.sh /usr/local/bin/
-
+find . -name '*\.sh' -exec install -v {} /usr/local/bin/ \;
 
 # install the systemd script
-install *.service /etc/systemd/system/
+find .  -regextype "egrep" -regex '.*(timer|service)' -exec install -v {} /etc/systemd/system/ \;
 systemctl daemon-reload
 
 # clean up the test file
