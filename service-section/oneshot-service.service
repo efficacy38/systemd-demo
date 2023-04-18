@@ -5,8 +5,10 @@ Wants=network-online.target
 
 [Service]
 Type=oneshot
-ExecStartPre=/usr/local/bin/prompt.sh simple "pre initing oneshot"
-ExecStart=/usr/local/bin/wait.sh oneshot
+ExecStart=/usr/local/bin/prompt.sh simple "step 1 oneshot"
+ExecStart=/usr/local/bin/prompt.sh simple "step 2 oneshot"
+ExecStart=/usr/local/bin/prompt.sh simple "step 3 oneshot"
+ExecStart=/usr/local/bin/prompt.sh simple "step 4 oneshot"
 
 [Install]
 WantedBy=multi-user.target

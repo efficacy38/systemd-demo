@@ -8,7 +8,7 @@ Type=simple
 ExecStartPre=/usr/local/bin/prompt.sh simple "pre initing simple"
 
 # start command
-ExecStart=/usr/local/bin/wait.sh simple
+ExecStart=/usr/local/bin/buggy-wait.sh simple
 
 # stop command
 ExecStop=/usr/local/bin/prompt.sh simple "prepare stop!!"
