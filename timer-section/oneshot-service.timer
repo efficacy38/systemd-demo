@@ -1,0 +1,14 @@
+[Unit]
+Description=oneshot timer
+
+[Timer]
+Unit=oneshot-service.service
+# OnCalendar=*-*-* *:*:00
+OnActiveSec=10s
+
+# restrict the accuracy to 1 sec, this would make cpu wake more frequently
+# default is 1min, minimum is 1us
+AccuracySec=1us
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,14 @@
+[Unit]
+Description=Simple Service
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/prompt.sh simple "step 1 oneshot"
+ExecStart=/usr/local/bin/prompt.sh simple "step 2 oneshot"
+ExecStart=/usr/local/bin/prompt.sh simple "step 3 oneshot"
+ExecStart=/usr/local/bin/prompt.sh simple "step 4 oneshot"
+
+[Install]
+WantedBy=multi-user.target
