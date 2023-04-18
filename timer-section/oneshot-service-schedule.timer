@@ -2,8 +2,7 @@
 Description=oneshot timer
 
 [Timer]
-# OnCalendar=*-*-* *:*:00
-OnUnitInactiveSec=15
+OnCalendar=*-*-* *:*:00
 Unit=oneshot-service.service
 
 # restrict the accuracy to 1 sec, this would make cpu wake more frequently
