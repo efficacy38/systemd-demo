@@ -1,0 +1,12 @@
+[Unit]
+Description=Simple Service
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+ExecStartPre=/usr/local/bin/prompt.sh simple "pre initing oneshot"
+ExecStart=/usr/local/bin/wait.sh oneshot
+
+[Install]
+WantedBy=multi-user.target
