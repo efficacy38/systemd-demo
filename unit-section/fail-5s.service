@@ -1,5 +1,6 @@
 [Unit]
 Description=fail in 5s
+OnFailure=status_email_user@%n.service
 
 [Service]
 Type=simple
