@@ -15,16 +15,9 @@ FILE_PATH=/data/TEST
 NAME=$1
 MESSAGE=$2
 
-
-# handle the termination
-# handle SIGINT, exit normally
-trap "printf '%s is interrupt\n' $NAME | tee -a $FILE_PATH; exit" SIGINT
-# handle SIGTERM, exit normally
-trap "printf '%s is terminated\n' $NAME | tee -a $FILE_PATH; exit" SIGTERM
-
 # main logic
 printf '%s %s\n' "$NAME" "$MESSAGE" | tee -a $FILE_PATH;
 
-# timeout and quit with status code 2
+# timeout and quit with status code 0
 exit 0
 
