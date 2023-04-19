@@ -2,7 +2,7 @@
 Description=oneshot timer
 
 [Timer]
-OnCalendar=*-*-* *:*:00
+OnCalendar=*-*-* 00:00:00
 Unit=oneshot-fake-backup.service
 
 # restrict the accuracy to 1 sec, this would make cpu wake more frequently
