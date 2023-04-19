@@ -1,0 +1,12 @@
+[Unit]
+Description=Backup service
+
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/prompt.sh simple "maybe sync code to remote"
+ExecStart=/usr/local/bin/prompt.sh simple "maybe make snapshot"
+ExecStart=/usr/local/bin/prompt.sh simple "maybe make some backup"
+
+[Install]
+WantedBy=multi-user.target

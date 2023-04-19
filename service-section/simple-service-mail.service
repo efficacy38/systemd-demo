@@ -1,0 +1,21 @@
+[Unit]
+Description=Simple Service with warning mechanism
+OnFailure=status_email_user@%n.service
+
+[Service]
+Type=simple
+
+# start with preStart command, can use multiple times
+ExecStartPre=/usr/local/bin/prompt.sh simple "pre initing simple"
+
+# start command
+ExecStart=/usr/local/bin/buggy-wait.sh simple
+
+# stop command
+ExecStop=/usr/local/bin/prompt.sh simple "prepare stop!!"
+
+# allow graceful shutdown for 3 seconds
+TimeoutSec=3s
+
+# reload command
+ExecReload=/usr/local/bin/prompt.sh simple "reloading!!"

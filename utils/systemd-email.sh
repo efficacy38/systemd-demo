@@ -1,6 +1,6 @@
 #!/bin/sh
 
-/usr/bin/sendmail -t <<ERRMAIL
+/usr/sbin/sendmail -t <<ERRMAIL
 To: $1
 From: systemd <root@$HOSTNAME>
 Subject: $2
